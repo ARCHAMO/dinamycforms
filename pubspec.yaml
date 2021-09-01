@@ -23,8 +23,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.12.2
-  json_dynamic_widget: ^1.4.0+1
+  http: ^0.13.0
+  json_dynamic_widget: ^2.1.0
+  json_schema2: ^2.0.0+2
+  rest_client: ^2.0.1+2
   toast: ^0.1.5
 
 

@@ -7,7 +7,7 @@ import 'package:toast/toast.dart';
 
 class SimpleText extends StatefulWidget {
   const SimpleText({Key key}) : super(key: key);
-  final url = 'http://192.168.1.13:3977/api/widgets';
+  final url = 'http://localhost:3977/api/prototipos/widgets';
 
   @override
   _SimpleTextState createState() => _SimpleTextState();
@@ -37,10 +37,12 @@ class _SimpleTextState extends State<SimpleText> {
   }
 
   Future<http.Response> _getWidget() async {
-    return http.get(widget.url);
+    var uri = Uri.http(widget.url, '');
+    return http.get(uri);
   }
 
   void validateForm() {
-    Toast.show('Hola Mundo', context, duration: Toast.LENGTH_LONG, gravity: Toast.CENTER);
+    Toast.show('Hola Mundo', context,
+        duration: Toast.LENGTH_LONG, gravity: Toast.CENTER);
   }
 }
